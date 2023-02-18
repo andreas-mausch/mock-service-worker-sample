@@ -2,42 +2,18 @@
 import axios from 'axios'
 import { ref, onMounted } from 'vue'
 
-defineProps<{ msg: string }>()
+const artworks = ref([])
 
-const count = ref(0)
-
-onMounted(() => {
-  axios.get('https://api.artic.edu/api/v1/artworks')
+onMounted(async () => {
+  const response = await axios.get('https://api.artic.edu/api/v1/artworks')
+  artworks.value = response.data.data
 })
 </script>
 
 <template>
-  <h1>{{ msg }}</h1>
+  <p>I have found these artworks:</p>
 
-  <div class="card">
-    <button type="button" @click="count++">count is {{ count }}</button>
-    <p>
-      Edit
-      <code>components/HelloWorld.vue</code> to test HMR
-    </p>
+  <div v-for="artwork in artworks">
+    {{ artwork.artist_title }}: {{ artwork.title }}
   </div>
-
-  <p>
-    Check out
-    <a href="https://vuejs.org/guide/quick-start.html#local" target="_blank"
-      >create-vue</a
-    >, the official Vue + Vite starter
-  </p>
-  <p>
-    Install
-    <a href="https://github.com/johnsoncodehk/volar" target="_blank">Volar</a>
-    in your IDE for a better DX
-  </p>
-  <p class="read-the-docs">Click on the Vite and Vue logos to learn more</p>
 </template>
-
-<style scoped>
-.read-the-docs {
-  color: #888;
-}
-</style>
