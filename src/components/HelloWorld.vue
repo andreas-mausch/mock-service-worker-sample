@@ -13,7 +13,7 @@ onMounted(async () => {
 <template>
   <p>I have found these artworks:</p>
 
-  <div v-for="artwork in artworks">
-    {{ artwork.artist_title }}: {{ artwork.title }}
+  <div v-for="{ artist_title, title } in artworks">
+    {{ artist_title }}: {{ title }}
   </div>
 </template>
