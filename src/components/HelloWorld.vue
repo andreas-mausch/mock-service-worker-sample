@@ -1,9 +1,14 @@
 <script setup lang="ts">
-import { ref } from 'vue'
+import axios from 'axios'
+import { ref, onMounted } from 'vue'
 
 defineProps<{ msg: string }>()
 
 const count = ref(0)
+
+onMounted(() => {
+  axios.get('https://api.artic.edu/api/v1/artworks')
+})
 </script>
 
 <template>
