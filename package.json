@@ -1,5 +1,5 @@
 {
-  "name": "mock-service-worker-app",
+  "name": "mock-service-worker-sample",
   "private": true,
   "version": "0.0.0",
   "type": "module",
