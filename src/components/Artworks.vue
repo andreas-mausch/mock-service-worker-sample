@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import axios from 'axios'
 import { ref, onMounted } from 'vue'
-import { PacmanLoader } from 'vue3-spinner'
+import { PacmanLoader } from "vue3-spinner"
 
 interface ArtworkResponse {
   data: Artwork[]
