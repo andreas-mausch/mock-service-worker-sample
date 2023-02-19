@@ -2,10 +2,19 @@
 import axios from 'axios'
 import { ref, onMounted } from 'vue'
 
-const artworks = ref([])
+interface ArtworkResponse {
+  data: Artwork[]
+}
+
+interface Artwork {
+  artist_title: string
+  title: string
+}
+
+const artworks = ref<Artwork[]>([])
 
 onMounted(async () => {
-  const response = await axios.get('https://api.artic.edu/api/v1/artworks')
+  const response = await axios.get<ArtworkResponse>('https://api.artic.edu/api/v1/artworks')
   artworks.value = response.data.data
 })
 </script>
