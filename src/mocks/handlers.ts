@@ -6,6 +6,7 @@ export const handlers = [
       context.status(200),
       context.json({
         data: [{
+          id: 1234,
           artist_title: 'Mausch',
           title: 'Ein Strichmännchen'
         }]

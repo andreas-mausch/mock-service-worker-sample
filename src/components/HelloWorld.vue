@@ -7,6 +7,7 @@ interface ArtworkResponse {
 }
 
 interface Artwork {
+  id: number
   artist_title: string
   title: string
 }
@@ -22,7 +23,7 @@ onMounted(async () => {
 <template>
   <p>I have found these artworks:</p>
 
-  <div v-for="{ artist_title, title } in artworks">
+  <div v-for="{ id, artist_title, title } in artworks" :key="id">
     {{ artist_title }}: {{ title }}
   </div>
 </template>
