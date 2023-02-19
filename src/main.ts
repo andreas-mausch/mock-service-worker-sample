@@ -1,9 +1,9 @@
 import { createApp } from 'vue'
 import './style.css'
 import App from './App.vue'
-import { worker } from './mocks/browser'
 
 if (import.meta.env.DEV) {
+  const { worker } = await import('./mocks/browser')
   await worker.start()
 }
 
