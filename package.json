@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "msw init ./public && VITE_WITH_MOCKS=true vite",
+    "dev": "msw init ./public && vite",
     "build": "vue-tsc && vite build",
     "preview": "vite preview"
   },
