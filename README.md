@@ -7,6 +7,8 @@ and displays the result.
 
 On a development machine, the API call can be mocked via msw.
 
+I've used [smoke](https://github.com/sinedied/smoke) in the past and want to try msw as an alternative.
+
 # Setup
 
 ```bash
