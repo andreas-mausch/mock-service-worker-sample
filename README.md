@@ -1,5 +1,3 @@
-# What
-
 This is a small project to demonstrate the [Mock Service Worker](https://mswjs.io/).
 
 It is a small Vue3 / Vite / TypeScript app which just makes a call to a public API
