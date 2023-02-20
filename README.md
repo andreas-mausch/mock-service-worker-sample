@@ -3,6 +3,9 @@ This is a small project to demonstrate the [Mock Service Worker](https://mswjs.i
 It is a small Vue3 / Vite / TypeScript app which just makes a call to a public API
 and displays the result.
 
+For testing, [Vitest](https://vitest.dev) with [Vue Testing Library](https://testing-library.com/docs/vue-testing-library/intro/)
+instead of [Vue Test Utils](https://test-utils.vuejs.org) is used.
+
 On a development machine, the API call can be mocked via msw.
 
 I've used [smoke](https://github.com/sinedied/smoke) in the past and want to try msw as an alternative.
