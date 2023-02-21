@@ -28,6 +28,12 @@ npm run dev
 npm run test
 ```
 
+# Lint sources via eslint
+
+```bash
+npm run lint
+```
+
 # Build for production
 
 ```bash
