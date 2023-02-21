@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "msw init ./public && vite",
     "test": "vitest",
-    "lint": "eslint ./**/*.ts ./**/*.vue",
+    "lint": "eslint --ignore-path .gitignore .",
     "build": "vue-tsc && vite build",
     "preview": "vite preview"
   },
