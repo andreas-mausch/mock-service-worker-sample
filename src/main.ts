@@ -1,10 +1,10 @@
-import { createApp } from 'vue'
-import './style.css'
-import App from './App.vue'
+import { createApp } from "vue"
+import "./style.css"
+import App from "./App.vue"
 
 if (import.meta.env.DEV) {
-  const { worker } = await import('./mocks/browser')
+  const { worker } = await import("./mocks/browser")
   await worker.start()
 }
 
-createApp(App).mount('#app')
+createApp(App).mount("#app")
