@@ -33,3 +33,7 @@ rules:
     - argsIgnorePattern: ^_
       varsIgnorePattern: ^_
       caughtErrorsIgnorePattern: ^_
+  vue/max-attributes-per-line:
+    - error
+    - singleline: 99
+      multiline: 1
