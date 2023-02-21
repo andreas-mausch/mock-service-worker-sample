@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "msw init ./public && vite",
     "test": "vitest",
-    "lint": "eslint --ignore-path .gitignore --ext .js,.ts,.vue .",
+    "lint": "eslint --ignore-path .gitignore --ext .js,.json,.ts,.vue .",
     "build": "vue-tsc && vite build",
     "preview": "vite preview"
   },
@@ -20,6 +20,7 @@
     "@typescript-eslint/parser": "5.53.0",
     "@vitejs/plugin-vue": "4.0.0",
     "eslint": "8.34.0",
+    "eslint-plugin-json": "3.1.0",
     "eslint-plugin-vue": "9.9.0",
     "happy-dom": "8.6.0",
     "msw": "1.0.1",
