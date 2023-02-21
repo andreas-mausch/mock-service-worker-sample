@@ -1,9 +1,9 @@
 import { test } from "vitest"
 import { render } from "@testing-library/vue"
-import Artworks from "@/components/Artworks.vue"
+import ArtworksList from "@/components/ArtworksList.vue"
 
-test("Artworks", async () => {
-  const { findByText } = render(Artworks)
+test("ArtworksList", async () => {
+  const { findByText } = render(ArtworksList)
 
   await findByText("Mausch: Ein Strichmännchen")
 })

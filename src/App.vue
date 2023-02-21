@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import Artworks from "./components/Artworks.vue"
+import ArtworksList from "./components/ArtworksList.vue"
 </script>
 
 <template>
-  <Artworks />
+  <ArtworksList />
 </template>
