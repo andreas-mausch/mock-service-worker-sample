@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { $fetch } from "ohmyfetch"
+import { ofetch } from "ofetch"
 import { ref, onMounted } from "vue"
 
 interface ArtworkResponse {
@@ -17,7 +17,7 @@ const loading = ref<boolean>(true)
 
 onMounted(async () => {
   try {
-    const response = await $fetch<ArtworkResponse>("https://api.artic.edu/api/v1/artworks")
+    const response = await ofetch<ArtworkResponse>("https://api.artic.edu/api/v1/artworks")
     artworks.value = response.data
   } finally {
     loading.value = false
