@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import axios from "axios"
+import { $fetch } from "ohmyfetch"
 import { ref, onMounted } from "vue"
 
 interface ArtworkResponse {
@@ -17,8 +17,8 @@ const loading = ref<boolean>(true)
 
 onMounted(async () => {
   try {
-    const response = await axios.get<ArtworkResponse>("https://api.artic.edu/api/v1/artworks")
-    artworks.value = response.data.data
+    const response = await $fetch<ArtworkResponse>("https://api.artic.edu/api/v1/artworks")
+    artworks.value = response.data
   } finally {
     loading.value = false
   }
